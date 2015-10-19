@@ -1,0 +1,9 @@
+name: Portfolio
+type: theme
+description: My portfolio site's theme
+package: Other
+core: 8.x
+libraries:
+  - portfolio/global-styling
+
+
