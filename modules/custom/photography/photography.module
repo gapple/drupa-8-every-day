@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains photography.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function photography_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the photography module.
+    case 'help.page.photography':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom photo display and order form.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function photography_theme() {
+  $theme = [];
+
+  return $theme;
+}

@@ -1,0 +1,9 @@
+name: Photography
+type: module
+description: Custom photo display and order form.
+core: 8.x
+package: Custom
+features: true
+dependencies:
+  - node
+  - views
