@@ -1,0 +1,12 @@
+uuid: e81d82d2-8801-4230-8945-69f61a97b6ed
+name: 'Drupal 8 Site Install'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en

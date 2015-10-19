@@ -1,0 +1,10 @@
+uuid: ea76b2ca-14b6-4490-ab36-548cc269bf27
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+id: node.full
+label: 'Full content'
+targetEntityType: node
+cache: true

@@ -1,0 +1,10 @@
+uuid: 6ffb7050-a8db-4f67-8b00-0adf98b1c54d
+langcode: en
+status: true
+dependencies: {  }
+id: feedback
+label: 'Website feedback'
+recipients:
+  - admin@example.com
+reply: ''
+weight: 0
