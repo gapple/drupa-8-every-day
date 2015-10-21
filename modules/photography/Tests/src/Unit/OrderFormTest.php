@@ -48,7 +48,7 @@ class OrderFormTest extends UnitTestCase {
    */
   public function testPostalCodeValid() {
     $postalCodeValidator = $this->getAccessibleMethod(
-      'Drupal\product\Form\ProductRequestForm',
+      'Drupal\photography\Form\OrderForm',
       'validPostalCode'
     );
     $form = new OrderForm();
@@ -60,7 +60,7 @@ class OrderFormTest extends UnitTestCase {
    */
   public function testPostalCodeInvalid() {
     $postalCodeValidator = $this->getAccessibleMethod(
-      'Drupal\product\Form\ProductRequestForm',
+      'Drupal\photography\Form\OrderForm',
       'validPostalCode'
     );
     $form = new OrderForm();
