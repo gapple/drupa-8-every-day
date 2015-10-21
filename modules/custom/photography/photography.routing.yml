@@ -6,3 +6,11 @@ photography.gallery_controller_gallery:
     _title: 'Photography Gallery'
   requirements:
     _permission: 'access content'
+
+photography.order_form:
+  path: '/photography/order'
+  defaults:
+    _form: '\Drupal\photography\Form\OrderForm'
+    _title: 'Photo Order Form'
+  requirements:
+    _permission: 'access content'
