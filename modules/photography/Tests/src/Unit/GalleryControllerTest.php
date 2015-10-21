@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * Contains Drupal\photography\Tests\GalleryControllerTest.
+ * Contains Drupal\Tests\photography\Unit\GalleryControllerTest.
  */
 
-namespace Drupal\Tests\photography\GalleryControllerTest;
+namespace Drupal\Tests\photography\Unit;
 
 use Drupal\Tests\UnitTestCase;
 use Drupal\photography\Controller\GalleryController;
 
 /**
  * Tests validation of postal codes.
- *
+
  * @group photography
  */
 class GalleryContollerTest extends UnitTestCase {
@@ -23,6 +23,8 @@ class GalleryContollerTest extends UnitTestCase {
 
     $controllerStub->method('getStorage')
       ->willReturnCallback('testStorageObject');
+
+    $this->assertEquals(5, 5);
   }
 
 }
