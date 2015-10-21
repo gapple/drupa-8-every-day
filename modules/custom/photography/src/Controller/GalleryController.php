@@ -28,14 +28,11 @@ class GalleryController extends ControllerBase {
     // That way we have access to the enity api while keeping our controller lean.
     $storage = $this->entityManager()->getStorage('node');
 
-    // Perform the entity query, as per usual.
-    $nids = $storage->getQuery()
-      ->condition('type', $bundle_type)
-      ->condition('status', 1)
-      ->execute();
-
-    // Load the nids we found.
-    return $storage->loadMultiple($nids);
+    // loadByProperties() allows us to query and load entities in one line!
+    return $storage->loadByProperties(array(
+      'type' => $bundle_type,
+      'status' => 1,
+    ));
   }
 
   /**
