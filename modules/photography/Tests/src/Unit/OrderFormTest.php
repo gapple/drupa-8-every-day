@@ -16,6 +16,7 @@ use Drupal\photography\Form\OrderForm;
  */
 class OrderFormTest extends UnitTestCase {
 
+
   /**
    * {@inheritdoc}
    */
@@ -28,6 +29,13 @@ class OrderFormTest extends UnitTestCase {
   }
 
   /**
+   * Set up our strings to test.
+   * @var string
+   */
+  public $validPostalCode   = 'M5A 1N1';
+  public $invalidPostalCode = '90210';
+
+  /**
    * Get an accessible method using reflection.
    */
   protected function getAccessibleMethod($class_name, $method_name) {
@@ -37,14 +45,8 @@ class OrderFormTest extends UnitTestCase {
     return $method;
   }
 
-  protected static function getValidPostalCode() {
-    return 'M6G 2S5';
-  }
-  protected static function getInvalidPostalCode() {
-    return '90210';
-  }
   /**
-   * Test Valid postal codes.
+   * Test valid postal codes.
    */
   public function testPostalCodeValid() {
     $postalCodeValidator = $this->getAccessibleMethod(
@@ -52,8 +54,7 @@ class OrderFormTest extends UnitTestCase {
       'validPostalCode'
     );
     $form = new OrderForm();
-    $postal_code = $this->getValidPostalCode();
-    $this->assertTrue($postalCodeValidator->invokeArgs($form, array($postal_code)));
+    $this->assertTrue($postalCodeValidator->invokeArgs($form, array($this->validPostalCode)));
   }
   /**
    * Test invalid postal codes.
@@ -64,7 +65,6 @@ class OrderFormTest extends UnitTestCase {
       'validPostalCode'
     );
     $form = new OrderForm();
-    $postal_code = $this->getInvalidPostalCode();
-    $this->assertFALSE($postalCodeValidator->invokeArgs($form, array($postal_code)));
+    $this->assertFALSE($postalCodeValidator->invokeArgs($form, array($this->invalidPostalCode)));
   }
 }
