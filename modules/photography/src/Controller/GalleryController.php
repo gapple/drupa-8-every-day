@@ -23,7 +23,7 @@ class GalleryController extends ControllerBase {
    * @return \Drupal\Core\Entity\EntityInterface[]
    *   Array of node objects keyed by nid.
    */
-  protected function loadAllPhotos($bundle_type = 'photograph') {
+  public function loadAllPhotos($bundle_type = 'photograph') {
     // Return the entity manager service and load the the storage instance for nodes.
     // That way we have access to the enity api while keeping our controller lean.
     $storage = $this->entityManager()->getStorage('node');
