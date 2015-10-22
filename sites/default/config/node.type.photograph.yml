@@ -1,0 +1,17 @@
+uuid: af91a8af-30cb-48d6-b007-7c9a11643a3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Photograph
+type: photograph
+description: 'Photographs to display for my gallery'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true
