@@ -51,9 +51,9 @@ class GalleryController extends ControllerBase {
     $gallery     = array();
 
     // Loop through the loaded photograph node objects and output their rendered result into a list.
+    $viewBuilder = $this->entityManager->getViewBuilder('node');
     foreach ($photographs as $photograph) {
-      $render    = node_view($photograph, $view_mode, $langcode);
-      $gallery[] = render($render);
+      $gallery[] = $viewBuilder->view($photograph, $view_mode);
     }
 
     // If the gallery is empty, we should apologise.
